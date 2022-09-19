@@ -50,7 +50,7 @@ func Validate(t Token, options ...ValidateOption) error {
 	var skew time.Duration
 	var validators = []Validator{
 		IsIssuedAtValid(),
-		IsExpirationValid(),
+		// IsExpirationValid(),		// 暂时屏蔽失效检测
 		IsNbfValid(),
 	}
 	for _, o := range options {
